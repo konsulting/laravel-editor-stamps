@@ -1,0 +1,26 @@
+{
+    "name": "konsulting/laravel-editor-stamps",
+    "description": "Simple package to add creator and editor to models, and populate them during creation or update.",
+    "authors": [
+        {
+            "name": "Keoghan Litchfield",
+            "email": "keoghan@klever.co.uk"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^5.6 | ^7.0",
+        "illuminate/database": "^5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Konsulting\\Laravel\\EditorStamps\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": ["tests"]
+    }
+}
