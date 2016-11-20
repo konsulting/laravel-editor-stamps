@@ -31,5 +31,6 @@ use Klever\Laravel\EditorStamps\Blueprint;
 Contributions are welcome and will be fully credited. We will accept contributions by Pull Request.
 
 Please:
+
 * Use the PSR-2 Coding Standard
 * Document changes in behaviour, including readme.md.
