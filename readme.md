@@ -4,24 +4,18 @@ This package provides a simple trait for your [Laravel](http://laravel.com) mode
 
 It also includes a replacement Schema Facade and BluePrint for use in your migrations to make the addition of `created_by` and `updated_by` columns. 
 
+## Compatibility ##
+
+Laravel 9
+
 ## Usage ##
 
 ### To use the trait ###
 Simply `use` it in your model. `use Konsulting\Laravel\EditorStamps\EditorStamps;`
 
 ### To use the Schema and Facade ###
-
-Replace Schema with this packages in `config/app.php`.
-
-`'Schema' => Illuminate\Support\Facades\Schema::class,`
-
-to 
-
-`'Schema' => \Klever\Laravel\EditorStamps\Schema::class,`
-
-
-Then replace the Schema and Blueprint references in Migrations where you want to use them. ```php
-
+Use the Schema and Blueprint in your migrations instead of Laravel Default.
+```
 use Klever\Laravel\EditorStamps\Schema;
 use Klever\Laravel\EditorStamps\Blueprint;
 ```
