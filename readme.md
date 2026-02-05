@@ -20,6 +20,8 @@ use Klever\Laravel\EditorStamps\Schema;
 use Klever\Laravel\EditorStamps\Blueprint;
 ```
 
+In Laravel 12, you need to use the default Blueprint and Schema - we extend them with macro's.
+
 ## Contributing ##
 
 Contributions are welcome and will be fully credited. We will accept contributions by Pull Request.
