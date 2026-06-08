@@ -13,9 +13,9 @@ class Schema extends Facade
     public static function customizedSchemaBuilder(?string $name = null): Builder
     {
         $builder = static::$app['db']->connection($name)->getSchemaBuilder();
-        $builder->blueprintResolver(function ($table, $callback) {
-            return new Blueprint($table, $callback);
-        });
+        $builder->blueprintResolver(function (...$args) {                                                                                                                                                                                                                           
+            return new Blueprint(...$args);                                                                                                                                                                                                                                         
+        });  
 
         return $builder;
     }
