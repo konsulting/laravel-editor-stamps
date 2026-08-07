@@ -6,7 +6,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function register()
     {
-        if (version_compare(app()->version(), '13.0', '<')) { 
+        if (version_compare(app()->version(), '12.0', '<')) { 
             $this->app->bind('db.custom_schema', fn() => Schema::customizedSchemaBuilder());
 
             return;
