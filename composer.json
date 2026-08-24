@@ -13,15 +13,21 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0 | ^10.0 | ^11.0",
-        "illuminate/database": "^9.0 | ^10.0 | ^11.0 | ^12.0 | ^13.0"
+        "illuminate/database": "^9.0 | ^10.0 | ^11.0 | ^12.0 | ^13.0",
+        "orchestra/testbench": "^7.0 | ^8.0 | ^9.0 | ^10.0 | ^11.0"
     },
     "autoload": {
         "psr-4": {
             "Konsulting\\Laravel\\EditorStamps\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Konsulting\\Laravel\\EditorStamps\\Tests\\": "tests/"
+        }
+    },
     "extra": {
-        "laravel" : {
+        "laravel": {
             "providers": [
                 "Konsulting\\Laravel\\EditorStamps\\ServiceProvider"
             ]
