@@ -103,8 +103,8 @@ Laravel 12.
 ## Version notes ##
 
 Before 1.2.1 the two styles were mutually exclusive, chosen by a Laravel
-version check: applications using one found the other unavailable. Since 1.2.1
-both are always registered. If you are on 1.2.0 and your migrations type-hint
+version check: applications using one found the other unavailable. Since 1.3.1
+both are always registered. If you are on 1.3.0 and your migrations type-hint
 `Konsulting\Laravel\EditorStamps\Blueprint`, upgrade rather than converting
 them.
 
