@@ -2,22 +2,23 @@
 
 namespace Konsulting\Laravel\EditorStamps;
 
+use Illuminate\Database\Schema\Blueprint as IlluminateBlueprint;
+
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     public function register()
     {
-        if (version_compare(app()->version(), '12.0', '<')) { 
-            $this->app->bind('db.custom_schema', fn() => Schema::customizedSchemaBuilder());
+        // Legacy API: the package's own Schema facade and Blueprint subclass.
+        $this->app->bind('db.custom_schema', fn () => Schema::customizedSchemaBuilder());
 
-            return;
-        }
-
-        \Illuminate\Database\Schema\Blueprint::macro('editorStamps', function () {
+        // Current API: the same columns on Laravel's own Blueprint. The subclass
+        // above inherits these, so both styles work in the same application.
+        IlluminateBlueprint::macro('editorStamps', function () {
             $this->integer('created_by')->unsigned()->default(0);
             $this->integer('updated_by')->unsigned()->default(0);
         });
 
-        \Illuminate\Database\Schema\Blueprint::macro('dropEditorStamps', function () {
+        IlluminateBlueprint::macro('dropEditorStamps', function () {
             $this->dropColumn('created_by');
             $this->dropColumn('updated_by');
         });

@@ -4,17 +4,11 @@ namespace Konsulting\Laravel\EditorStamps;
 
 use Illuminate\Database\Schema\Blueprint as OriginalBlueprint;
 
+/**
+ * Retained so existing migrations can keep type-hinting this class.
+ * editorStamps() and dropEditorStamps() are inherited from the macros
+ * registered on the parent by the ServiceProvider.
+ */
 class Blueprint extends OriginalBlueprint
 {
-    public function editorStamps()
-    {
-        $this->integer('created_by')->unsigned()->default(0);
-        $this->integer('updated_by')->unsigned()->default(0);
-    }
-
-    public function dropEditorStamps()
-    {
-        $this->dropColumn('created_by');
-        $this->dropColumn('updated_by');
-    }
 }
